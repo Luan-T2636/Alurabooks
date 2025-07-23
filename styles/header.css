@@ -1,0 +1,161 @@
+.cabecalho{
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.conteiner_botao:checked~.conteiner_rotulo>.cabecalho_menu-hamburguer   {
+    background-image: url(../assets/Menu\ Aberto.svg);
+}
+
+.conteiner_botao:checked~.conteiner_rotulo{
+    background: var(--azul-degrade);
+}
+
+.conteiner{
+    display: flex;
+    align-items: center;
+
+}
+
+.cabecalho_menu-hamburguer{
+    width: 24px;
+    height: 24px;
+    background-image: url(../assets/Menu.svg);
+    background-position:center ;
+    background-repeat: no-repeat;
+    display: inline-block;
+    position: relative;
+}
+
+.conteiner_imagem{
+    padding: 1em;
+}
+
+.lista_menu{
+    display: none;
+    position: absolute;
+    top: 7%;
+    width: 60vw;
+}
+
+.conteiner_botao:checked~.lista_menu{
+    display: block;
+}
+
+.lista_menu_titulo,.lista_menu_item{
+    background-color: var(--branco);
+    padding: 1em;
+    
+}
+
+.lista_menu_titulo{
+    color: var(--laranja);
+    font-weight: 700;
+
+}
+
+.lista_menu_link{
+text-decoration: none;
+color:var(--azul-degrade);
+}
+
+.conteiner_botao{
+    display: none;
+}
+
+.conteiner_titulo{
+    display: none;
+}
+
+.opções{
+    display: none;
+}
+
+.conteiner_texto{
+    display: none;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    .conteiner_titulo ,
+    .contato_titulo_negrito{
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+        display: block;
+    }
+
+    .conteiner_titulo{
+        font-weight: 400;
+    }
+
+    .conteiner_titulo_negrito{
+        font-weight: 700;
+    }
+
+    .opções{
+        display: flex;
+    }
+
+     .opções_botao:checked~.conteiner_rotulo>.opções_item{
+        background :var(--azul-degrade);
+        color: var(--branco);
+    }
+
+    .opções_item{
+        padding: 2em 1em;
+
+    }
+
+    .opções_link{
+        text-decoration: none;
+        color: var(--preto);
+
+    }
+    
+    .conteiner_imagem_transparente{
+        display: none;
+    }
+
+    .cabecalho_menu-hamburguer{
+        display: none;
+    }
+
+    .opções_botao:checked~.lista_menu{
+        display:block;
+        width: auto;
+        
+    }
+    
+    .opções_botao{
+        display: none;
+    }
+
+   
+
+
+}
+
+@media screen and (min-width: 1728px){
+     .conteiner_link{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto);
+     }
+
+     .cabecalho{
+        padding: 0 2em;
+     }
+
+     .opções{
+        margin-right: auto;
+     }
+
+     .conteiner_texto{
+        display: block;
+     }
+
+}
